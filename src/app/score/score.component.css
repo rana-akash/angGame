@@ -1,0 +1,439 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, Sans-serif;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: white;
+  cursor: pointer;
+}
+.container .layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 4s ease;
+  opacity: 0.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 100%;
+  overflow: hidden;
+}
+.container .layer > div.text {
+  display: flex;
+  text-align: center;
+  color: white;
+  font-size: 36px;
+  width: 50%;
+  height: 50%;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 1.5s linear, -webkit-transform 4s ease;
+  transition: transform 4s ease, opacity 1.5s linear;
+  transition: transform 4s ease, opacity 1.5s linear, -webkit-transform 4s ease;
+}
+.container .layer.filter {
+  background: linear-gradient(0deg, #000, #000);
+}
+.container .layer.sunset {
+  background: linear-gradient(0deg, violet, #000);
+  
+  opacity: 0.5;
+}
+.container .layer.sunset > div {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  opacity: 1;
+}
+.container .layer.nighttime {
+  background: linear-gradient(0deg,#e22f2f , #000);
+  opacity: 0;
+}
+.container .layer.nighttime > div {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  opacity: 0;
+}
+.container .layer.stars {
+  opacity: 0.1;
+  transition: opacity 4s ease, -webkit-transform 4s;
+  transition: opacity 4s ease, transform 4s;
+  transition: opacity 4s ease, transform 4s, -webkit-transform 4s;
+  -webkit-transform: translateY(-5%);
+          transform: translateY(-5%);
+}
+.container .layer.stars > div {
+  transition: -webkit-transform 0s;
+  transition: transform 0s;
+  transition: transform 0s, -webkit-transform 0s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 3px;
+  border-radius: 2px;
+  background: white;
+  box-shadow: 0 0 2px white;
+}
+.container .layer.stars > div:nth-child(1) {
+  -webkit-transform: translateX(1324px) translateY(76px) scale(0.5714285714);
+          transform: translateX(1324px) translateY(76px) scale(0.5714285714);
+  box-shadow: 0 0 1px white;
+  opacity: 0.1;
+}
+.container .layer.stars > div:nth-child(2) {
+  -webkit-transform: translateX(212px) translateY(193px) scale(1.1428571429);
+          transform: translateX(212px) translateY(193px) scale(1.1428571429);
+  box-shadow: 0 0 3px white;
+  opacity: 0.3;
+}
+.container .layer.stars > div:nth-child(3) {
+  -webkit-transform: translateX(1704px) translateY(66px) scale(0.7142857143);
+          transform: translateX(1704px) translateY(66px) scale(0.7142857143);
+  box-shadow: 0 0 1px white;
+  opacity: 0.8;
+}
+.container .layer.stars > div:nth-child(4) {
+  -webkit-transform: translateX(381px) translateY(382px) scale(0.2857142857);
+          transform: translateX(381px) translateY(382px) scale(0.2857142857);
+  box-shadow: 0 0 4px white;
+  opacity: 1;
+}
+.container .layer.stars > div:nth-child(5) {
+  -webkit-transform: translateX(143px) translateY(288px) scale(0.4285714286);
+          transform: translateX(143px) translateY(288px) scale(0.4285714286);
+  box-shadow: 0 0 4px white;
+  opacity: 0.8;
+}
+.container .layer.stars > div:nth-child(6) {
+  -webkit-transform: translateX(264px) translateY(148px) scale(0.8571428571);
+          transform: translateX(264px) translateY(148px) scale(0.8571428571);
+  box-shadow: 0 0 1px white;
+  opacity: 0.8;
+}
+.container .layer.stars > div:nth-child(7) {
+  -webkit-transform: translateX(947px) translateY(134px) scale(0.5714285714);
+          transform: translateX(947px) translateY(134px) scale(0.5714285714);
+  box-shadow: 0 0 4px white;
+  opacity: 0.2;
+}
+.container .layer.stars > div:nth-child(8) {
+  -webkit-transform: translateX(2037px) translateY(28px) scale(0.4285714286);
+          transform: translateX(2037px) translateY(28px) scale(0.4285714286);
+  box-shadow: 0 0 3px white;
+  opacity: 0.4;
+}
+.container .layer.stars > div:nth-child(9) {
+  -webkit-transform: translateX(488px) translateY(189px) scale(0.5714285714);
+          transform: translateX(488px) translateY(189px) scale(0.5714285714);
+  box-shadow: 0 0 1px white;
+  opacity: 0.7;
+}
+.container .layer.stars > div:nth-child(10) {
+  -webkit-transform: translateX(1402px) translateY(58px) scale(0.4285714286);
+          transform: translateX(1402px) translateY(58px) scale(0.4285714286);
+  box-shadow: 0 0 2px white;
+  opacity: 0.9;
+}
+.container .layer.stars > div:nth-child(11) {
+  -webkit-transform: translateX(756px) translateY(241px) scale(0.8571428571);
+          transform: translateX(756px) translateY(241px) scale(0.8571428571);
+  box-shadow: 0 0 4px white;
+  opacity: 0.7;
+}
+.container .layer.stars > div:nth-child(12) {
+  -webkit-transform: translateX(1320px) translateY(311px) scale(1.2857142857);
+          transform: translateX(1320px) translateY(311px) scale(1.2857142857);
+  box-shadow: 0 0 2px white;
+  opacity: 0.5;
+}
+.container .layer.stars > div:nth-child(13) {
+  -webkit-transform: translateX(1174px) translateY(61px) scale(1.1428571429);
+          transform: translateX(1174px) translateY(61px) scale(1.1428571429);
+  box-shadow: 0 0 2px white;
+  opacity: 0.5;
+}
+.container .layer.stars > div:nth-child(14) {
+  -webkit-transform: translateX(572px) translateY(288px) scale(0.8571428571);
+          transform: translateX(572px) translateY(288px) scale(0.8571428571);
+  box-shadow: 0 0 3px white;
+  opacity: 0.8;
+}
+.container .layer.stars > div:nth-child(15) {
+  -webkit-transform: translateX(2157px) translateY(2px) scale(0.1428571429);
+          transform: translateX(2157px) translateY(2px) scale(0.1428571429);
+  box-shadow: 0 0 2px white;
+  opacity: 0.7;
+}
+.container .layer.stars > div:nth-child(16) {
+  -webkit-transform: translateX(1558px) translateY(170px) scale(0.2857142857);
+          transform: translateX(1558px) translateY(170px) scale(0.2857142857);
+  box-shadow: 0 0 3px white;
+  opacity: 0.9;
+}
+.container .layer.stars > div:nth-child(17) {
+  -webkit-transform: translateX(1982px) translateY(395px) scale(0.2857142857);
+          transform: translateX(1982px) translateY(395px) scale(0.2857142857);
+  box-shadow: 0 0 4px white;
+  opacity: 0.4;
+}
+.container .layer.stars > div:nth-child(18) {
+  -webkit-transform: translateX(1387px) translateY(7px) scale(0.8571428571);
+          transform: translateX(1387px) translateY(7px) scale(0.8571428571);
+  box-shadow: 0 0 2px white;
+  opacity: 0.4;
+}
+.container .layer.stars > div:nth-child(19) {
+  -webkit-transform: translateX(85px) translateY(145px) scale(1.2857142857);
+          transform: translateX(85px) translateY(145px) scale(1.2857142857);
+  box-shadow: 0 0 1px white;
+  opacity: 0.6;
+}
+.container .layer.stars > div:nth-child(20) {
+  -webkit-transform: translateX(801px) translateY(185px) scale(1.2857142857);
+          transform: translateX(801px) translateY(185px) scale(1.2857142857);
+  box-shadow: 0 0 4px white;
+  opacity: 0.1;
+}
+.container .layer.stars > div:nth-child(21) {
+  -webkit-transform: translateX(286px) translateY(291px) scale(0.5714285714);
+          transform: translateX(286px) translateY(291px) scale(0.5714285714);
+  box-shadow: 0 0 3px white;
+  opacity: 0.5;
+}
+.container .layer.stars > div:nth-child(22) {
+  -webkit-transform: translateX(399px) translateY(331px) scale(0.7142857143);
+          transform: translateX(399px) translateY(331px) scale(0.7142857143);
+  box-shadow: 0 0 3px white;
+  opacity: 0.3;
+}
+.container .layer.stars > div:nth-child(23) {
+  -webkit-transform: translateX(1781px) translateY(275px) scale(0.7142857143);
+          transform: translateX(1781px) translateY(275px) scale(0.7142857143);
+  box-shadow: 0 0 2px white;
+  opacity: 0.3;
+}
+.container .layer.stars > div:nth-child(24) {
+  -webkit-transform: translateX(2103px) translateY(114px) scale(0.1428571429);
+          transform: translateX(2103px) translateY(114px) scale(0.1428571429);
+  box-shadow: 0 0 4px white;
+  opacity: 0.7;
+}
+.container .layer.stars > div:nth-child(25) {
+  -webkit-transform: translateX(1223px) translateY(363px) scale(1.4285714286);
+          transform: translateX(1223px) translateY(363px) scale(1.4285714286);
+  box-shadow: 0 0 4px white;
+  opacity: 0.7;
+}
+.container .layer.stars > div:nth-child(26) {
+  -webkit-transform: translateX(718px) translateY(218px) scale(1.1428571429);
+          transform: translateX(718px) translateY(218px) scale(1.1428571429);
+  box-shadow: 0 0 2px white;
+  opacity: 0.2;
+}
+.container .layer.stars > div:nth-child(27) {
+  -webkit-transform: translateX(1060px) translateY(392px) scale(0.2857142857);
+          transform: translateX(1060px) translateY(392px) scale(0.2857142857);
+  box-shadow: 0 0 3px white;
+  opacity: 1;
+}
+.container .layer.stars > div:nth-child(28) {
+  -webkit-transform: translateX(249px) translateY(100px) scale(0.7142857143);
+          transform: translateX(249px) translateY(100px) scale(0.7142857143);
+  box-shadow: 0 0 1px white;
+  opacity: 0.4;
+}
+.container .layer.stars > div:nth-child(29) {
+  -webkit-transform: translateX(244px) translateY(304px) scale(1.1428571429);
+          transform: translateX(244px) translateY(304px) scale(1.1428571429);
+  box-shadow: 0 0 1px white;
+  opacity: 0.8;
+}
+.container .layer.stars > div:nth-child(30) {
+  -webkit-transform: translateX(153px) translateY(375px) scale(0.7142857143);
+          transform: translateX(153px) translateY(375px) scale(0.7142857143);
+  box-shadow: 0 0 1px white;
+  opacity: 0.2;
+}
+.container .layer.stars > div:nth-child(31) {
+  -webkit-transform: translateX(1488px) translateY(190px) scale(0.8571428571);
+          transform: translateX(1488px) translateY(190px) scale(0.8571428571);
+  box-shadow: 0 0 3px white;
+  opacity: 0.2;
+}
+.container .layer.stars > div:nth-child(32) {
+  -webkit-transform: translateX(2163px) translateY(137px) scale(1.2857142857);
+          transform: translateX(2163px) translateY(137px) scale(1.2857142857);
+  box-shadow: 0 0 1px white;
+  opacity: 0.7;
+}
+.container .layer.stars > div:nth-child(33) {
+  -webkit-transform: translateX(66px) translateY(61px) scale(1.4285714286);
+          transform: translateX(66px) translateY(61px) scale(1.4285714286);
+  box-shadow: 0 0 3px white;
+  opacity: 1;
+}
+.container .layer.stars > div:nth-child(34) {
+  -webkit-transform: translateX(1583px) translateY(390px) scale(1.1428571429);
+          transform: translateX(1583px) translateY(390px) scale(1.1428571429);
+  box-shadow: 0 0 2px white;
+  opacity: 0.3;
+}
+.container .layer.stars > div:nth-child(35) {
+  -webkit-transform: translateX(617px) translateY(399px) scale(0.5714285714);
+          transform: translateX(617px) translateY(399px) scale(0.5714285714);
+  box-shadow: 0 0 3px white;
+  opacity: 0.8;
+}
+.container .layer.stars > div:nth-child(36) {
+  -webkit-transform: translateX(340px) translateY(121px) scale(1.4285714286);
+          transform: translateX(340px) translateY(121px) scale(1.4285714286);
+  box-shadow: 0 0 2px white;
+  opacity: 0.9;
+}
+.container .layer.stars > div:nth-child(37) {
+  -webkit-transform: translateX(413px) translateY(289px) scale(0.5714285714);
+          transform: translateX(413px) translateY(289px) scale(0.5714285714);
+  box-shadow: 0 0 2px white;
+  opacity: 0.3;
+}
+.container .layer.stars > div:nth-child(38) {
+  -webkit-transform: translateX(2027px) translateY(64px) scale(0.8571428571);
+          transform: translateX(2027px) translateY(64px) scale(0.8571428571);
+  box-shadow: 0 0 3px white;
+  opacity: 1;
+}
+.container .layer.stars > div:nth-child(39) {
+  -webkit-transform: translateX(140px) translateY(332px) scale(0.8571428571);
+          transform: translateX(140px) translateY(332px) scale(0.8571428571);
+  box-shadow: 0 0 2px white;
+  opacity: 0.3;
+}
+.container .layer.stars > div:nth-child(40) {
+  -webkit-transform: translateX(2075px) translateY(79px) scale(0.2857142857);
+          transform: translateX(2075px) translateY(79px) scale(0.2857142857);
+  box-shadow: 0 0 2px white;
+  opacity: 0.8;
+}
+.container .layer.stars > div:nth-child(41) {
+  -webkit-transform: translateX(1294px) translateY(26px) scale(0.2857142857);
+          transform: translateX(1294px) translateY(26px) scale(0.2857142857);
+  box-shadow: 0 0 1px white;
+  opacity: 0.9;
+}
+.container .layer.stars > div:nth-child(42) {
+  -webkit-transform: translateX(1832px) translateY(162px) scale(1.4285714286);
+          transform: translateX(1832px) translateY(162px) scale(1.4285714286);
+  box-shadow: 0 0 4px white;
+  opacity: 1;
+}
+.container .layer.stars > div:nth-child(43) {
+  -webkit-transform: translateX(2088px) translateY(200px) scale(0.1428571429);
+          transform: translateX(2088px) translateY(200px) scale(0.1428571429);
+  box-shadow: 0 0 1px white;
+  opacity: 0.1;
+}
+.container .layer.stars > div:nth-child(44) {
+  -webkit-transform: translateX(1159px) translateY(336px) scale(1.2857142857);
+          transform: translateX(1159px) translateY(336px) scale(1.2857142857);
+  box-shadow: 0 0 4px white;
+  opacity: 0.9;
+}
+.container .layer.stars > div:nth-child(45) {
+  -webkit-transform: translateX(1495px) translateY(58px) scale(0.4285714286);
+          transform: translateX(1495px) translateY(58px) scale(0.4285714286);
+  box-shadow: 0 0 4px white;
+  opacity: 0.1;
+}
+.container .layer.stars > div:nth-child(46) {
+  -webkit-transform: translateX(1450px) translateY(313px) scale(0.4285714286);
+          transform: translateX(1450px) translateY(313px) scale(0.4285714286);
+  box-shadow: 0 0 2px white;
+  opacity: 0.5;
+}
+.container .layer.stars > div:nth-child(47) {
+  -webkit-transform: translateX(43px) translateY(344px) scale(0.2857142857);
+          transform: translateX(43px) translateY(344px) scale(0.2857142857);
+  box-shadow: 0 0 1px white;
+  opacity: 0.3;
+}
+.container .layer.stars > div:nth-child(48) {
+  -webkit-transform: translateX(1441px) translateY(146px) scale(1.4285714286);
+          transform: translateX(1441px) translateY(146px) scale(1.4285714286);
+  box-shadow: 0 0 4px white;
+  opacity: 1;
+}
+.container .layer.stars > div:nth-child(49) {
+  -webkit-transform: translateX(2085px) translateY(353px) scale(1);
+          transform: translateX(2085px) translateY(353px) scale(1);
+  box-shadow: 0 0 1px white;
+  opacity: 0.6;
+}
+.container .layer.stars > div:nth-child(50) {
+  -webkit-transform: translateX(967px) translateY(389px) scale(1);
+          transform: translateX(967px) translateY(389px) scale(1);
+  box-shadow: 0 0 1px white;
+  opacity: 0.6;
+}
+.container .note {
+  padding: 20px;
+  border: solid 1px white;
+  width: 33.333%;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  position: absolute;
+  bottom: 15px;
+  left: 33.333%;
+  background: rgba(125, 95, 85, 0.4);
+  text-shadow: 0 1px 1px black;
+  border-radius: 30px;
+  transition: background 4s ease;
+}
+.container.night .layer:nth-child(2) {
+  opacity: 0;
+}
+.container.night .layer:nth-child(2) > div {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  opacity: 0;
+}
+.container.night .layer:nth-child(3) {
+  opacity: 0.8;
+}
+.container.night .layer:nth-child(3) > div {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  opacity: 1;
+}
+.container.night .layer.stars {
+  opacity: 1;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  transition: opacity 8s ease, -webkit-transform 15s ease;
+  transition: opacity 8s ease, transform 15s ease;
+  transition: opacity 8s ease, transform 15s ease, -webkit-transform 15s ease;
+}
+.container.night .note {
+  background: rgba(100, 100, 122, 0.02);
+}
+
+
+
+
+
+
+
+

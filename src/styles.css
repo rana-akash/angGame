@@ -1,0 +1,177 @@
+
+
+.ui-widget-header,.ui-state-default, ui-button {
+  background:#b9cd6d;
+  border: 1px solid #b9cd6d;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+* {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@media screen and (max-width: 730px) {
+  .github-banner {
+    display: none;
+  }
+}
+
+.game-header {
+  color: #fff;
+  padding: 5px 15px 5px 0px;
+  position: relative;
+}
+
+.game-header>.score-block {
+  display: inline-block;
+}
+
+.score-block>.score {
+  position: absolute;
+  right: 8px;
+  top: -5px;
+}
+
+.score-block>.best-score {
+  position: absolute;
+  right: 8px;
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+.game-header>.logo {
+  display: inline-block;
+  padding-left: 15px;
+}
+
+.game-container {
+  width: 468px;
+  position: relative;
+  display: block;
+  margin: auto;
+  background-color: #47565A;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.row {
+  height: 26px;
+}
+
+
+
+.column {
+  border: 1px solid #000000;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+
+}
+
+.start-button {
+  padding: 15px;
+  text-align: center;
+  background-color: #47565A;
+  color: white;
+  border-radius: 5px;
+}
+
+.start-button:hover {
+  opacity: 0.65;
+  cursor: pointer;
+}
+
+.start-button.new-game-button {
+  margin: 0 105px 4px 105px;
+}
+
+.disable-clicks {
+  pointer-events: none;
+}
+
+.new-game-menu {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  bottom: 0;
+  padding: 40% 0;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.new-game-menu-label {
+  font-size: 1.17em;
+  margin-bottom: 13px;
+  display: block;
+  color: #fff;
+}
+
+.new-best-score {
+  animation: glow .5s infinite alternate;
+}
+
+@keyframes glow {
+  to {
+    text-shadow: 0 0 15px #ffff00;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .game-container {
+    width: 100%;
+  }
+  .column {
+    width: 5.55%;
+    height: 0;
+    padding-bottom: 5.06%;
+    box-sizing: border-box;
+  }
+  .row {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    height: 0;
+    padding-bottom: 5.5%;
+  }
+  .new-game-menu {
+    width: 100%;
+    top: 8px;
+    padding-top: 30%;
+    font-size: 80%;
+  }
+  .start-button.new-game-button {
+    margin: 0 15% 1% 15%;
+  }
+  @-moz-document url-prefix() {
+    .column {
+      min-height: 5.5vw;
+    }
+  }
+}
+.animation{
+  margin:0 auto; /* for demo purpose only */
+  width: 83.33333333333333px; /* the total width of the sprite image divided by each frame width */
+	height: 126px;
+  background:url(https://38.media.tumblr.com/tumblr_mb4zsyUYCT1rvuv0d.png);
+  animation: walk-cycle 0.50s steps(6) infinite; /* the sprite has 6 frames hence: steps(6) */
+  animation-play-state:paused;
+}
+
+/* Walk cycle animation */
+	@keyframes walk-cycle{
+      from {
+        background-position: 0px;
+      }
+      to {
+        background-position: -500px; /* loop the animation frames once the end of the image is reached, the total width of the sprite image is 500px  */
+      }
+  }

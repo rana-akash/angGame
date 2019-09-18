@@ -1,0 +1,40 @@
+
+<div class="game-container" *ngIf="!isGameOver;else GameOverTemplate" [style.body.background-color]="color" style = "float: left;margin-top: 50px;margin-left: 50px">
+  <!--
+<div class="game-header">
+    <h3 class="logo">ngx-Snake</h3>
+    <div class="score-block">
+      <h3 class="score" [ngClass]="{'new-best-score': newBestScore}">Score: {{score}}</h3>
+      <h3 class="best-score" [ngClass]="{'new-best-score': newBestScore}">Best Score: {{best_score}}</h3>
+    </div>
+  </div>
+  -->
+    <div class="row" *ngFor="let column of board; let i = index;">
+      <div class="column" [ngStyle]="{'background-color': setColors(i, j)}" *ngFor="let row of column; let j = index"></div>
+    </div>
+    <div class="start-button" id="btn1" [ngClass]="{'disable-clicks': gameStarted}" (click)="newGame()" >Start Game</div>
+
+</div><div id = "dialog-1"></div>
+<div>
+
+  <div style="float: left;width: 300px;height: 100px;margin-top: 80px;margin-left: 400px;" id="infoBox"></div>
+  <div style="float: right;" *ngIf="!isGameOver;">
+      <app-animate [positionChange]="posChanged" style="float: left;margin-top: 20px"></app-animate>
+      <div  style="float: right;margin-left: 300px">
+          <div>
+            <br>
+            <power [hero1PowerLeft]="hero1PowerLimit" [hero2PowerLeft]="hero2PowerLimit" [hero1LifeLeft]="hero1Life" [hero2LifeLeft]="hero2Life"></power>
+          </div>
+          <div>
+              <app-score [hero1Score]="hero1Score" [hero2Score]="hero2Score" ></app-score>
+          </div>
+      </div>
+  </div>
+
+</div>
+
+
+
+<ng-template #GameOverTemplate><br/>
+<h1 style="text-align: center;">Game Over!!</h1>
+</ng-template>

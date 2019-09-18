@@ -1,0 +1,29 @@
+{
+  "project": {
+    "name": "dorksRush"
+  },
+  "apps": [{
+    "root": "src",
+    "assets": ["assets"],
+    "outDir": "dist",
+    "index": "index.html",
+    "main": "main.ts",
+    "polyfills": "polyfills.ts",
+    "tsconfig": "tsconfig.json",
+    "prefix": "app",
+    "styles": [
+      "styles.css"
+    ],
+    "scripts": []
+  }],
+  "defaults": {
+    "styleExt": "css",
+    "component": {
+      "inlineStyle": false,
+      "inlineTemplate": false
+    }
+  },
+  "warnings": {
+    "typescriptMismatch": false
+  }
+}
